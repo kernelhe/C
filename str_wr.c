@@ -16,7 +16,8 @@ int main(void)
 		}
 		
 		printf("输入字符串：\n");
-		fgets(sentence, (sizeof sentence / sizeof sentence[0]), stdin);
+		fgets(sentence, (sizeof sentence / sizeof sentence[0]), \
+		      stdin);
 		
 		fprintf(fptr, "%s", sentence);
 		fclose(fptr);
