@@ -44,7 +44,8 @@ int main(void)
 	} else if (pid == 0){
 		*addr = 20;
 		printf("Child set value to %d\n", *addr);
-
+		
+		/*程序退出时会自动unmmap*/
 		if (munmap(p, size) == -1) {
 			perror("munmap");
 			printf("%s\n", strerror(errno));
