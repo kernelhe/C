@@ -21,10 +21,12 @@ extern int errno;
 
 int main(void)
 {
-	//创建私有内存映射512kB
+	//创建私有匿名内存映射512kB
 	size_t size = 512 * 1024;
+
+	//mmap的函数原型为 void * mmap(void *start, size_t length, int prot, int flags, int fd, off_t offsize)
 	void *p = mmap(NULL, size, PROT_READ | PROT_WRITE,
-		       MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+	       MAP_PRIVATE | MAP_ANONYMOUS, -1, 0); //匿名映射是指参数fd=-1的映射，此时不通过文件共享内存，适用于父子进程之间
 
 	if (p == MAP_FAILED) {
 		perror("mmap"); //perror()显示传给它的字符串，后面跟一个冒号，一个空格，和当前errno值的文本表示形式
