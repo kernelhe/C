@@ -15,6 +15,7 @@ int main(void)
 		fprintf(stderr, "错误代码：%d\n", errno);
 		perror("Print the error case");
 		fprintf(stderr, "错误原因：%s\n", strerror(errnum));
+		printf("错误原因：%s\n", strerror(errno));
 	} else {
 		fclose(fp);
 	}
