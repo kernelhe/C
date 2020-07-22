@@ -14,6 +14,10 @@
 #include <sys/types.h> /*pid_t*/
 #include <stdlib.h> /*exit(),EXIT_FAILURE,EXIT_SUCCESS*/
 #include <sys/wait.h>
+
+/*
+ *mmap()映射时是按照page的整数倍进行映射。page=4096B,如果一个文件大小为96B，后4000B会设置成0
+ */
 #include <sys/mman.h> /*mmap()*/
 #include <string.h> /*strerror()*/
 
