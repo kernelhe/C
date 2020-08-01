@@ -24,23 +24,25 @@ int main(void)
 	long int k;
 	long long l;
 	long double m;
-	size_t n;
+	unsigned long long n;
+	size_t o;
 
-	printf(" char a:%d\n		\
-		unsigned char b:%d\n	\
-		short c:%d\n		\
-		unsigned short d:%d\n	\
-		int e:%d\n		\
-		unsigned int f:%d\n	\
-		long g:%d\n		\
-		unsigned long h:%d\n	\
-		float i:%d\n		\
-		double j:%d\n		\
-		long int k:%d\n		\
-		long long l:%d\n	\
-		long double m:%d\n	\
-		size_t n:%d\n		\
-		",
+	printf(" char:%d\n		\
+		unsigned char:%d\n	\
+		short:%d\n		\
+		unsigned short:%d\n	\
+		int:%d\n		\
+		unsigned int:%d\n	\
+		long:%d\n		\
+		unsigned long:%d\n	\
+		float:%d\n		\
+		double:%d\n		\
+		long int:%d\n		\
+		long long:%d\n		\
+		long double:%d\n	\
+		unsigned long long:%d\n	\
+		size_t:%d\n		\
+		",			\
 		sizeof(a),	\
 		sizeof(b),	\
 		sizeof(c),	\
@@ -54,7 +56,8 @@ int main(void)
 		sizeof(k),	\
 		sizeof(l),	\
 		sizeof(m),	\
-		sizeof(n));
+		sizeof(n),	\
+		sizeof(o));
 	
 	return 0;
 }
