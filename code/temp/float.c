@@ -16,9 +16,18 @@
  */
 
 #include <stdio.h>
+#include <float.h>
 
 int main(void)
 {
+	printf("float存储的最大字节数:%lu\n", sizeof(float));//因为关键字sizeof返回一个size_t的类型，所以要用%lu格式打印
+	printf("float最小值：%e\n", FLT_MIN);
+	printf("float最小值：%.50f\n", FLT_MIN);
+	printf("float最大值：%e\n", FLT_MAX);
+	printf("float最大值：%f\n", FLT_MAX);
+	printf("精度值：%d\n", FLT_DIG);
+
+
 	return 0;
 }
 
