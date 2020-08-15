@@ -53,3 +53,57 @@ int g = 20;
 10 = 20；
 ```
 
+
+
+#### C的判断
+
+C语言把任何**非零**和**非空**的值假定为**true**，把**零**或**NULL**假定为**false**。
+
+#### 判断语句
+
+C语言提供了以下类型的判断语句：
+
+| 语句           | 描述                                                         |
+| -------------- | ------------------------------------------------------------ |
+| if语句         | 一个if语句由一个布尔表达式后跟一个或多个语句组成             |
+| if...else语句  | 一个if语句后可跟一个可选的else语句，else语句在布尔表达式为假时执行 |
+| 嵌套if语句     | 可以在一个if语句或else if语句内使用另一个if或else if语句     |
+| switch语句     | 一个switch语句允许测试一个变量等于多个值时的情况             |
+| 嵌套switch语句 | 可以在一个switch语句内使用另一个switch语句                   |
+
+switch语句
+
+一个switch语句允许测试一个变量等于多个值时候的情况。每个值称为一个case，且被测试的变量会对每个switch case进行检查。
+
+```c
+switch(expression){
+    	case constant-expression  :
+       			statement(s);
+      	 		break; /* 可选的 */
+    	case constant-expression  :
+       			statement(s);
+       			break; /* 可选的 */
+  
+    /* 可以有任意数量的 case 语句 */
+   		default : /* 可选的 */
+      			 statement(s);
+}
+```
+
+switch语句必须遵循下面的规则：
+
+- switch语句中的expression是一个**常量表达式**，必须是一个**整型**或**枚举**类型。
+
+- 在一个switch中可以有任意数量的case语句。每个case后跟一个比较的值和一个冒号。
+
+- case的constant-expression**必须与switch中的变量具有相同的数据类型**，且必须是一个常量或字面量。
+
+- 当被测试的变量等于case中的常量时，case后跟的语句将被执行，直到遇到break语句为止。
+
+- 当**遇到break**语句时，**switch终止**，控制流将跳转到switch语句后的下一行。
+
+- 不是每个case都需要包含break。如果case语句不包含break，控制流将会继续后续的case，直到遇到break为止。
+
+- 一个switch语句可以有一个可选的default case，出现在switch的结尾。default case可用于在上面所有的case都不为真时执行一个任务。**default case中的break语句不是必需的**。
+
+  ![switch_statement](/img/switch_statement.jpg)
