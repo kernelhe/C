@@ -97,3 +97,9 @@ extern存储类用于提供一个全局变量的引用，全局变量对所有�
 | float    | 0            |
 | double   | 0            |
 | pointer  | NULL         |
+
+
+
+#### float 与 double 类型区别
+
+> 对编程人员来说，double 和 float 的区别是 double 精度高，有效数字 16 位，float 精度 7 位。但 double 消耗内存是 float 的两倍，double 的运算速度比 float 慢得多，C 语言中数学函数名称 double 和 float 不同，不要写错，能用单精度时不要用双精度（以省内存，加快运算速度）。
