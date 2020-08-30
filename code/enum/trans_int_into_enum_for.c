@@ -26,8 +26,9 @@ int main(void)
 	day = (enum DAY)num;//通过强制类型转换给枚举变量day赋值
 	
 	for (day; day <= SUN; day++) {
-		switch ((day & MON) | (day & TUE) | (day & WED) | 	\
-			(day & THU) | (day & FRI) | (day & SAT) | (day & SUN)) {
+		//switch ((day & MON) | (day & TUE) | (day & WED) | 	\
+		//	(day & THU) | (day & FRI) | (day & SAT) | (day & SUN)) {
+		switch (day & (MON | TUE | WED | THU | FRI | SAT | SUN)) {
 		//case 0:
 		//	printf("error\n");
 		//	break;

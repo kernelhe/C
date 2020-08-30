@@ -16,8 +16,10 @@ int main(void)
 	printf("current enum number\n");
 	
 	for (day = MON; day <= SUN; day++) {
-		switch ((day & MON) | (day & TUE) | (day & WED) | 	\
-			(day & THU) | (day & FRI) | (day & SAT) | (day & SUN)) {
+		/*switch ((day & MON) | (day & TUE) | (day & WED) | 	\
+			(day & THU) | (day & FRI) | (day & SAT) | (day & SUN)) { */
+		switch (day & (MON | TUE | WED | THU | FRI | SAT | SUN)) {
+			//按位与不管你是几个1，只要对方和你对应位置的1一样，你俩就一样
 		case 1:
 			printf("MON:%d\n", day);
 			break;
