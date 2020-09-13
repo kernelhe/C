@@ -1,13 +1,13 @@
 #include <stdio.h>
 
+#define MAX 5
+
 int main(void)
 {
-	int arr[5] = {1,2,3,4,5};
+	int arr[MAX] = {1,2,3,4,5};
 	int *ptr, i;
-	size_t cnt;
-
-	cnt = sizeof(int);
-	printf("cnt = %lu\n", cnt);
+	
+	ptr = &arr[MAX - 1];
 	
 	for (i = 4; i >= 0; i--) {
 		printf("by数组下标：arr[%d] = %d\n", i, arr[i]);
