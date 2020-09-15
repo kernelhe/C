@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define MAX 7
+
 int main(void)
 {
 	/*
@@ -14,6 +16,7 @@ int main(void)
 	unsigned long *p5;
 	int *p6 = NULL;
 	static int *pp6 = NULL;
+	int arry[MAX] = {1,2,3,4,5,6,7};
 
 	printf("p1:%lu\n",sizeof(p1));
 	printf("int *:%lu\n", sizeof(int *));

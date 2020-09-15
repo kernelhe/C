@@ -3,6 +3,8 @@
 int main(void)
 {
 	int num = 1024;
+	int num_zero = 0;
+	int *num_null = NULL;
 	float f = 10.24;
 	double d = 10.24;
 	char c = 'a';
@@ -22,6 +24,8 @@ int main(void)
 
 	printf("十进制%d 八进制%o 十六进制:%x\n", num, num, num);
 	printf("十进制%d 八进制%#o 十六进制:%#x\n", num, num, num);
+	printf("十六进制：num_zero = %#x\n", num_zero);
+	printf("十六进制：num_null = %#x\n", num_null);
 	printf("float  小数形式:%f 指数形式:%e\n", f, f);
 	printf("double 小数形式:%f 指数形式:%e\n", d, d);
 	printf("float  较短输出:%g\n", f);
