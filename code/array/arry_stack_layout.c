@@ -3,7 +3,7 @@
 int main(void)
 {
 	char a[] = {1,2,3,4,5};
-	//char a[5] = {a,b,c,d,e};
+	//char a[5] = {a,b,c,d,e};/* 这种形式需要写字母对应的ASCII码，比如a，对应49 */
 	char b[] = "abcde";
 	
 	/*
