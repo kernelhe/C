@@ -9,7 +9,7 @@ int get_next_value(void)
 void populate_arry(int *arry, size_t size, 	\
 		   int (*get_next_value)(void))/* get_next_value是回调函数 */
 {
-	for (size_t i = 0; i < size; i++) {
+	for (size_t i = 0; i < size; i++) {/* Please use 'size_t' instead of 'int' represent array index */
 		arry[i] = get_next_value();
 	}
 }
