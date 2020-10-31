@@ -21,6 +21,16 @@ int main(void)
 		printf("value of string[%d]...:%c\n", i, string[i]);
 	}
 
+	/* 空字符'\0'对字符数组的影响 */
+	//char greeting[5] = {'h', 'e', 'l', 'l', 'o'};
+	char greeting[6] = {'h', 'e', 'l', 'l', 'o', '\0'};/* 如果想通过字符数组的形式正确输出字符串，必须要在字符数组的末尾添加空字符 */
+	
+	printf("Get greeting...:%s\n", greeting);
+	
+	for (int i = 0; i < 5; i++) {
+		printf("value of greeting[%d]...:%c\n", i, greeting[i]);
+	}
+	
 	return 0;
 }
 
