@@ -30,6 +30,13 @@ int main(void)
 	for (int i = 0; i < 5; i++) {
 		printf("value of greeting[%d]...:%c\n", i, greeting[i]);
 	}
+
+	/* 初始化的另一种形式 */
+	char datas[] = "linux";
+	char strings[] = {"linux"};
+
+	printf("Get datas...:%s\n", datas);
+	printf("Get strings...:%s\n", strings);
 	
 	return 0;
 }
