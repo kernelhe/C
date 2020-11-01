@@ -38,7 +38,7 @@ int main(void)
 }
 
 /* 函数定义 */
-void get_message(struct student stu)
+void get_message(struct student stu)/* 参数stu也是一个student结构体，stu里面同样有着name,id,addr,grade,class */
 {
 	printf("Get name...:%s\n", stu.name);
 	printf("Get id...:%u\n", stu.id);
