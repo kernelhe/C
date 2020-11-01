@@ -26,6 +26,7 @@ int main(void)
 		char *addr;
 		unsigned number;
 	} fund = {"linux", "china", 100};/* 定义时初始化 */
+	/* 结构体成员整体赋值仅限于定义结构体变量的时候，在使用过程中只能对成员逐一赋值 */
 
 	printf("Print message...:%s, %s, %u\n", fund.name, fund.addr, fund.number);
 
