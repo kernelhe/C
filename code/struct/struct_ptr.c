@@ -9,7 +9,8 @@ struct student
 	unsigned class;
 };
 
-static void get_stu_message(struct student *stu);
+//static void get_stu_message(struct student *stu);
+static void get_stu_message(struct student *);/* 函数声明时，如果参数为结构体类型指针，可以省略后面的变量定义。但是函数定义时不能省略 */
 
 int main(void)
 {
