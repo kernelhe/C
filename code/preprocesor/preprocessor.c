@@ -1,3 +1,9 @@
+#define _X86
+#ifdef _X86
+/* #pragma可以在编译时，在窗口中输出信息 */
+ #pragma message("_X86 macro activated!")
+#endif
+
 #include <stdio.h>
 
 #define FILE_SIZE 20
