@@ -13,6 +13,18 @@ int main(void)
 		unsigned long birthday;
 	} stu;
 
+	/*
+	 * typedef 与 #define 的不同
+	 * 	1.typedef仅限于为类型定义符号名称,#define不仅可以为类型定义别名，也能为数值定义别名
+	 * 	2.typedef由编译器解释执行，#define由预处理器解释执行
+	 */
+	typedef struct teacher
+	{
+		char name[10];
+		unsigned id;
+		char *addr;
+	} teach_t;
+
 	typedef struct
 	{
 		char *name;
@@ -27,6 +39,12 @@ int main(void)
 		unsigned number;
 	} fund = {"linux", "china", 100};/* 定义时初始化 */
 	/* 结构体成员整体赋值仅限于定义结构体变量的时候，在使用过程中只能对成员逐一赋值 */
+
+	teach_t teach = {
+		.name = "kang",
+	};
+
+	printf("Get teacher name...:%s\n", teach.name);
 
 	printf("Print message...:%s, %s, %u\n", fund.name, fund.addr, fund.number);
 
