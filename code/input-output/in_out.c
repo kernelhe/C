@@ -5,22 +5,22 @@ int main(void)
 	//char c;
 	//int i;
 	unsigned i;
-	char mesg[200];
+	//char mesg[200];
 
-	//printf("Please enter:\n");
+	printf("Please enter:\n");
 
-	//i = getchar();
+	i = getchar();
 
-	//printf("\nyou entered value...:%d\n");
-	//putchar(i);
-	//printf("\n");
+	//printf("\nyou entered value...:%u\n");
+	putchar(i);
+	printf("\n");
 
-	printf("Please enter the string...\n");
-	fgets(mesg, sizeof(mesg), stdin);
+	//printf("Please enter the string...\n");
+	//fgets(mesg, sizeof(mesg), stdin);
 
-	printf("You enterd:");
-	fputs(mesg, stdout);/* 末尾自动添加换行符 */
-
+	//printf("You enterd:");
+	//fputs(mesg, stdout);/* 末尾自动添加换行符 */
+	
 	return 0;
 }
 
