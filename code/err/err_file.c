@@ -10,7 +10,7 @@ int main(void)
 	int errnum;
 
 	fp = fopen("a.txt", "rb");
-	if (fp == NULL) {
+	if (!fp) {
 		errnum = errno;
 		fprintf(stderr, "错误代码：%d\n", errno);
 		perror("Print the error case");
