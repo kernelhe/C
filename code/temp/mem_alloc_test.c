@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <unistd.h>
+#include <string.h>
 
 #define SIZE_MAX(n)	pow(1024.0, 3.0)*n
 
@@ -20,7 +21,7 @@
 int main(void)
 {
 	int size;
-	unsigned long total;
+	unsigned long long total;
 	printf("Select memory capacity(G):please input following number...:2 or 4 or 8 or 16\n");	
 	scanf("%d", &size);
 	switch (size) {
@@ -54,21 +55,29 @@ int main(void)
 	printf("==================================================\n");
 	sleep(2);
 	printf("OK, Start allocating memory...\n");
-
-	char buffer[SIZE_BLOCK];
+	printf("total: %llu\n", total);
+	
+	char block[SIZE_BLOCK];
+	char * buffer[total];
 	unsigned long long num = 0;
 	
-	for (unsigned long i = 0; i < total; i++) {
-		char *buf = (char *)malloc(sizeof(buffer));
+	for (unsigned long long i = 0; i < total; i++) {
+		char *buf = (char *)malloc(sizeof(block));
 		if (!buf)
 			exit(1);
-		
-		for (unsigned j = 0; j < SIZE_BLOCK; j++) 
-			buf[j] = num++;
-			
-		free(buf);
+
+		buffer[i] = buf;
 	}
 	
+	for (unsigned long long j = 0; j < total; j++) {
+		memset(buffer[j], num++, SIZE_BLOCK);
+		/* printf("buffer[%llu]:%llu\n", j, buffer[j][0]); 		*/
+		/* printf("buffer[%llu]:%llu\n", j, buffer[j][SIZE_BLOCK - 1]); */
+	} 
+
+	for (unsigned long long k = 0; k < total; k++)
+		free(buffer[k]);
+		
 	return 0;
 }
 
