@@ -83,15 +83,15 @@ int main(void)
 
 			buffer[i] = buf;
 		}
-	
-		for (unsigned long long j = 0; j < total; j++) {
-			memset(buffer[j], num++, SIZE_BLOCK);
+		
+		//for (unsigned long long j = 0; j < total; j++) {
+		//	memset(buffer[j], num++, SIZE_BLOCK);
 			/* printf("buffer[%llu]:%llu\n", j, buffer[j][0]); 		*/
 			/* printf("buffer[%llu]:%llu\n", j, buffer[j][SIZE_BLOCK - 1]); */
-		} 
+		//} 
 
-		for (unsigned long long k = 0; k < total; k++)
-			free(buffer[k]);
+		//for (unsigned long long k = 0; k < total; k++)
+		//	free(buffer[k]);
 	}
 		
 	return 0;
