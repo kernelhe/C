@@ -11,8 +11,26 @@
  */
 #include <stdio.h>
 
+#define SWAP(a, b)	\
+{			\
+	a = a ^ b;	\
+	b = a ^ b;	\
+	a = b ^ a;	\
+}
+
 int main(void)
 {
+	int a = 1;
+	int b = 2;
+
+	printf("%d\n", a);
+	printf("%d\n", b);
+	
+	SWAP(a, b);
+
+	printf("%d\n", a);
+	printf("%d\n", b);
+
 	return 0;
 }
 
