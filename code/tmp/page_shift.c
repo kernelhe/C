@@ -14,9 +14,9 @@ int main()
 	nr_page_shift = 0x5606c5b02260 >> PAGE_SHIFT;			/* 得到页号 */
 	nr_page_size = (unsigned long)(0x5606c5b02260 / PAGE_SIZE);	/* 得到页号 */
 
-	printf("nr_page_mask: %lx\n", nr_page_mask);
-	printf("nr_page_shift:%lx\n", nr_page_shift);
-	printf("nr_page_size: %lx\n", nr_page_size);
+	printf("nr_page_mask: %#lx\n", nr_page_mask);
+	printf("nr_page_shift:%#lx\n", nr_page_shift);
+	printf("nr_page_size: %#lx\n", nr_page_size);
 	
 	return 0;
 }
