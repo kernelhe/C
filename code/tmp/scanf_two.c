@@ -2,18 +2,23 @@
 
 int main()
 {
-	int a, b;
+	int a;
 	char c;
+	char d;
 
-	puts("input int value:");
-	scanf("%d%d", &a, &b);
+	puts("Please input value:");
+	scanf("%d", &a);
+	scanf("%c ", &c);
+	d = getchar();
 
+	/*
 	puts("input char again:");
 	getchar();
 	scanf("%c", &c);
+	*/
 
-	printf("%d %d %c\n", a, b, c);
-	
+	printf("%d %c %c\n", a, c, d);
+
 	return 0;
 }
 
