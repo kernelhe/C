@@ -31,14 +31,18 @@ void traverse_linklist(link *head)
 {
 	link *tmp = head->next;
 
-	for (tmp;;tmp = tmp->next) {
+	for (tmp; tmp->next != NULL;tmp = tmp->next) {
+		printf("%d\n", tmp->val);
+		/*
 		if (tmp->next) 
 			printf("%d\n", tmp->val);
 		else {
 			printf("%d\n", tmp->val);
-			break;	/* 到达链表末尾 */
+			break;	
 		}
+		*/
 	}
+	printf("%d\n", tmp->val);
 }
 
 int get_index(link *head, int index)
