@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 int main(void)
 {
@@ -44,6 +45,10 @@ int main(void)
 	printf("精度整数1024:%.6d\n", num);
 	printf("精度float 10.24:%.6f\n", f);
 	printf("精度字符串12345678:%.5s\n", s7);//最多输出5个字符，默认全部输出
+
+	printf("pid:%d\n", getpid());
+
+	pause();
 
 	return 0;
 }
